@@ -10,31 +10,21 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
-    }
+    let detailDescriptionLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+        view.backgroundColor = .white
+        detailDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(detailDescriptionLabel)
+        detailDescriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        detailDescriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
     var detailItem: NSDate? {
         didSet {
-            // Update the view.
-            configureView()
+            detailDescriptionLabel.text = detailItem?.description
         }
     }
-
-
 }
 
