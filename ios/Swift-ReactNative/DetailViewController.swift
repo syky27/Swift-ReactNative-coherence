@@ -15,16 +15,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        detailDescriptionLabel.text = "Swift native UILabel"
         detailDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(detailDescriptionLabel)
         detailDescriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         detailDescriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-
-    var detailItem: NSDate? {
-        didSet {
-            detailDescriptionLabel.text = detailItem?.description
-        }
     }
 }
 
