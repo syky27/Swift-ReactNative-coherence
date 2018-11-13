@@ -8,7 +8,7 @@ The instuctions are here: https://facebook.github.io/react-native/docs/integrati
 
 React pod has 43 issues (warning)... :-/
 
-[react_warnings.png](warnings)
+![warnings](react_warnings.png)
 
 ## What I like
 
@@ -21,7 +21,30 @@ I believe that Apple has the power to kill any other dev tools then the ones the
 
 ## How Can I run this example?
 
+#### Get your self `yarn`
 
+```
+brew install yarn
+```
+
+#### Get React native deps and run server
+In root of this project perform
+
+```
+yarn install
+npm start
+```
+
+#### Install pods
+```
+cd ios/
+pod install
+```
+
+#### Open Xcode build and run the app
+```
+open [*]i.xcworkspace
+```
 
 
 
